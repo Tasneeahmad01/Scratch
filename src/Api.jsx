@@ -50,3 +50,5 @@ const Question = [
         answer: "State is a local data storage that is local to the component only and cannot be passed to other components. Props are used to pass data from one component to another."
     }
 ];
+
+export default Question;
