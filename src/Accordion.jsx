@@ -15,8 +15,9 @@
 //   )
 // }
 
-
+// src/Accordion.js
 import React, { useState } from 'react';
+import './Accordion.css';
 
 const AccordionItem = ({ title, content, isOpen, onClick }) => (
   <div className="accordion-item">
@@ -51,5 +52,3 @@ const Accordion = ({ items }) => {
 };
 
 export default Accordion;
-
-
