@@ -1,54 +1,57 @@
-// import React, { useState } from "react";
-// import { Question } from "./Api";
+// import React, { useState } from 'react';
 
-// const Accordion = ({Question,anwer})=>{
-//   const [show ,setShow] = useState(false);
-
-//   return(
-//     <>
-//     <div className="main-heading">
-//       <p onClick={()=>setShow(!show)}>{show? "-":"+"}</p>
-//    <h3>{Question}</h3>
-//     {show && <p className="answer">{answer}</p>}
+// const AccordionItem = ({ title, content, isOpen, onClick }) => (
+//   <div className="accordion-item">
+//     <div className="accordion-title" onClick={onClick}>
+//       <span>{isOpen ? '-' : '+'}</span>
+//       {title}
 //     </div>
-//     </>
-//   )
-// }
+//     {isOpen && <div className="accordion-content">{content}</div>}
+//   </div>
+// );
 
-// src/Accordion.js
-import React, { useState } from 'react';
-import './Accordion.css';
+// const Accordion = ({ items }) => {
+//   const [openIndex, setOpenIndex] = useState(null);
 
-const AccordionItem = ({ title, content, isOpen, onClick }) => (
-  <div className="accordion-item">
-    <div className="accordion-title" onClick={onClick}>
-      {title}
-      <span>{isOpen ? '-' : '+'}</span>
-    </div>
-    {isOpen && <div className="accordion-content">{content}</div>}
+//   const handleItemClick = (index) => {
+//     setOpenIndex(openIndex === index ? null : index);
+//   };
+
+//   return (
+//     <div className="accordion">
+//       {items.map((item, index) => (
+//         <AccordionItem
+//           key={index}
+//           title={<h2>{item.question}</h2>}
+//           content={item.answer}
+//           isOpen={openIndex === index}
+//           onClick={() => handleItemClick(index)}
+//         />
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default Accordion;
+
+
+
+import React, { useState } from "react";
+
+const Accordion = ({Question,answer})=>{
+  const [show,setShow] = useState(false);
+console.log(Question)
+  return(
+  <>
+  <div className="main-heading">
+    <p onClick={()=>setShow(!show)}>{show?"-":"+"}</p>
+    {/* <h3>{Question}</h3> */}
+   
   </div>
-);
+  {show && <p className="answer">{answer}</p>}
+  </>
+  )
+}
 
-const Accordion = ({ items }) => {
-  const [openIndex, setOpenIndex] = useState(null);
+export default Accordion
 
-  const handleItemClick = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
-  return (
-    <div className="accordion">
-      {items.map((item, index) => (
-        <AccordionItem
-          key={index}
-          title={item.title}
-          content={item.content}
-          isOpen={openIndex === index}
-          onClick={() => handleItemClick(index)}
-        />
-      ))}
-    </div>
-  );
-};
-
-export default Accordion;

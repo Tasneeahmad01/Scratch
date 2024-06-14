@@ -1,4 +1,4 @@
-export const Question = [
+const Question = [
     {
         id: 1,
         question: "What is the virtual DOM?",
@@ -29,7 +29,7 @@ export const Question = [
         question: "What is JSX?",
         answer: "JSX stands for JavaScript XML. It is a syntax extension for JavaScript that looks similar to HTML. It is used with React to describe what the UI should look like."
     },
-    {
+{
         id: 7,
         question: "What is a higher-order component (HOC) in React?",
         answer: "A higher-order component (HOC) is a function that takes a component and returns a new component. HOCs are used for reusing component logic."

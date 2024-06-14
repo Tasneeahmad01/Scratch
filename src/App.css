@@ -1,4 +1,4 @@
-
+  /* @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -14,7 +14,7 @@ body{
   background-image: linear-gradient(#fcf5f5,#ffeff4fd);
 }
 .main-div{
-  width: 30vh;
+  width: 50vh;
   padding: 50px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
@@ -27,6 +27,8 @@ h1{
   font-family: "Bitter",serif;
   text-transform: capitalize;
   font-size: 32px;
+  justify-content: center;
+
 }
 .main-heading{
   cursor: pointer;
@@ -42,18 +44,23 @@ h1{
   word-spacing: 2px;
   font-weight: 400;
   line-height: 1.7;
-  background: #fcf5f5;
+  background: #f5d2d2;
   color: rgb(40,37,53);
 }
 
 
-/* src/Accordion.css */
-.accordion {
+ .accordion {
   width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+   border-radius: 4px;
+margin: 10;
+  padding: 10px;
+  gap:20px;
 }
-
+span{
+  font-size: 2rem;
+  margin-right: 30px;
+  text-shadow: 0px 0px 10px red;
+}
 .accordion-item {
   border-bottom: 1px solid #ccc;
 }
@@ -68,16 +75,19 @@ h1{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f1f1f1;
+  background-color: #f3e99d;
 }
 
 .accordion-content {
   padding: 10px;
-  background-color: #fff;
-}
+  background-color:#95a367;
+  color:#f3e99d;
+} 
 
-/* src/App.css */
-.App {
+ .App {
   font-family: Arial, sans-serif;
   padding: 20px;
+  align-items: center;
+  justify-content: center;
 }
+  */
